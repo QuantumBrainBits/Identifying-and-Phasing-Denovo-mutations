@@ -16,7 +16,6 @@ def Determine_PofO(NHsnps_regions, Aligned_file_loc):
     
     samfile = pysam.AlignmentFile(f'{Aligned_file_loc}', "rc")
 
-    # list containing determined PofO, (there are still few cases with ambiguity, which will be passed to ambiguity module to clarify them)
     Determined_PofO = []
     
     for repeat_region in tqdm(NHsnps_regions):
@@ -31,7 +30,7 @@ def Determine_PofO(NHsnps_regions, Aligned_file_loc):
         snp_pos = int(repeat_region[-5])-1 # comparing with read.get_aligned_pairs(with_seq=True)
         snp_gts = [repeat_region[-4], repeat_region[-3]]
         snp_gts_representation = [repeat_region[-8], repeat_region[-7], repeat_region[-6]]
-        denovo_gts = repeat_region[5].split('/') # ***************************************************************change the var name : denovo_gts to offspring alleles
+        denovo_gts = repeat_region[5].split('/')
         repeat_len = int(repeat_region[3])
 
         # here we are calling the function to store the snp allele parent of origin.
