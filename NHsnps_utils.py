@@ -100,11 +100,9 @@ def Proximal_snps(joint_vcf_loc, o_id, f_id, m_id, dnv_list_list):
                         # Checking the inheritence from the parents.
                         if Genotype_info1[2] in ['0|1', '1|0'] and Genotype_info1[3] in ['0|0', '1|1']:
                             NHsnp_denovo_sites.append([*Genotype_info1[0], *Genotype_info1[1:], 'Left_flank'])
-                            # print(Genotype_info1[0], Genotype_info1[1:], 'Left_flank', file = out, sep = '\t')
 
                         elif Genotype_info1[3] in ['0|1', '1|0'] and Genotype_info1[2] in ['0|0', '1|1']:
                             NHsnp_denovo_sites.append([*Genotype_info1[0], *Genotype_info1[1:], 'Left_flank'])
-                            # print(*Genotype_info1[0], *Genotype_info1[1:], 'Left_flank', file = out, sep = '\t')
                             
                     snp_alleles_info.pop(index_0)  
             
