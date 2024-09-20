@@ -24,7 +24,6 @@ def parse_args():
     parser.add_argument('--Paternal_file_id',  type=str,  dest='Paternal_file_id',       required=True,  help= 'Input : Paternal file id')
     parser.add_argument('--Maternal_file_id',  type=str,  dest='Maternal_file_id',       required=True,  help= 'Input : Maternal file id')
     parser.add_argument('--Alignment_file',    type=str,  dest='Alignment_file',         required=True,  help= 'Input : Maternal file id')
-    # filter arguments need to updated
     # filter: fragment size, number of reads, min read quality, flank disnt, Allele drop out, additional info feild
     
     
